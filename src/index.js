@@ -5,13 +5,9 @@ import Todolist from "./Todolist";
 var destination = document.querySelector("#container");
 
 
-
-//
-
 ReactDOM.render(
     <div>
-<p>Hello World Brice 2
-</p>
+<p>Hello World Brice 2</p>
 <Todolist/>
     </div>,
     destination

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import TodoItems from "./TodoItems";
-//import "./TodoList.css";
+import "./TodoList.css";
 
 class Todolist extends Component {
     constructor(props) {
@@ -13,7 +13,7 @@ class Todolist extends Component {
     }
 
     addItem(e) {
-        if (this._inputEleemnt.value !== "") {
+        if (this._inputElement.value !== "") {
             var newItem = {
                 text: this._inputElement.value,
                 key: Date.now()
@@ -27,7 +27,7 @@ class Todolist extends Component {
         }
 
         this._inputElement.value = "";
-        console.log("addItem");
+        //console.log("addItem");
         console.log(this.state.items);
 
         e.preventDefault();
@@ -40,7 +40,7 @@ class Todolist extends Component {
 
     render() {
         return (
-            <div className="todolistMain">
+            <div className="todoListMain">
                 <div className="header">
                     <form onSubmit={this.addItem}>
                         <input ref={(a) => this._inputElement = a}
