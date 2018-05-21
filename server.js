@@ -1,5 +1,21 @@
 const express = require('express');
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
+
+// Read and set environment variables
+require("dotenv").config();
+
+// Require mysql
+var mysql = require("mysql");
+
+// Set up our connection information
+var connection = mysql.createConnection({
+  port: process.env.DB_PORT,
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME
+});
+
 const cookieSession = require('cookie-session');
 const passport = require('passport')
 var keys = require('./config/keys.js');
